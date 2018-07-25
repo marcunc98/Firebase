@@ -4,11 +4,12 @@
 //this one to use its functionalities.
 
 import * as auth from './auth';
-// import * as db from './db';
+import * as db from './db'; //making the functionalities from your Firebase database API available in your Firebase module’s entry point.
 import * as firebase from './firebase';
 
 export {
   auth,
+  db,
   firebase,
 };
 

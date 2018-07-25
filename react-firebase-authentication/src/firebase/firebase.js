@@ -3,7 +3,7 @@
 
 import firebase from 'firebase/app'; //importing the firebase object from the firebase node package
 import 'firebase/auth';  //part of the Firebase API which will be used in the src/firebase/auth.js file and thus needs to be exported
-// import 'firebase/database';
+import 'firebase/database';
 
 
   // Initialize PRODUCTION Firebase config
@@ -34,13 +34,14 @@ import 'firebase/auth';  //part of the Firebase API which will be used in the sr
       firebase.initializeApp(config);
   }
 
-  // const db = firebase.database();
+  const db = firebase.database();
   const auth = firebase.auth();
 
 
   //Firebase separates its authentication and database API
-  export {  
-      auth
+  export { 
+    db, 
+    auth
   };
 
   
